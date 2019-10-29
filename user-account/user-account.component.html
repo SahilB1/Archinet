@@ -1,0 +1,142 @@
+<!doctype html>
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <div id="bgImageDiv">
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container nav-container">
+        <div>
+          <a (click)="returnHome()" href><img id="logo" class="navbar-brand" src="../assets/ArchinetNewWhite.png" /></a>
+        </div>
+        <button class="navbar-toggler" type="button"
+        data-toggle="collapse" data-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <h5><a routerLink="/signup" class="navBarButton pr-4 pl-4 mt-3 mr-1">Register</a></h5>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <h5><a routerLink="/login" class="navBarButton pr-4 pl-4 mt-3 mr-1">Login</a></h5>
+          </li>
+          <li class="nav-item displayName mr-4 mt-1" *ngIf="isLoggedIn">
+              <h6><a class="mt-3 mr-1">{{firstName}}</a></h6>
+              <h6><a class="mt-3 mr-1">{{lastName}}</a></h6>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <h5><a routerLink="/feedback" class="navBarButton pr-4 pl-4 mt-3 mr-1">Feedback</a></h5>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <h5><a routerLink="/user-profile" class="navBarButton pr-4 pl-4 mt-3 mr-1">Profile</a></h5>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <h5><a routerLink="/upload" class="navBarButton pr-4 pl-4 mt-3 mr-1">Upload</a></h5>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <h5><a class="navBarButton pr-4 pl-4 mt-3 mr-1 text-white" (click)="signOut()">Logout</a></h5>
+          </li>
+        </ul>
+      </div>
+
+      </div>
+    </nav>
+
+
+
+
+    <!--<nav id="navbar" class="navbar navbar-expand-md text-white navbar-dark">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <div class="container ml-0 mr-0">
+      <a (click)="returnHome()" href><img id="logo" class="navbar-brand" src="../assets/ArchinetNewWhite.png" /></a>
+
+
+    </div>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <h5><a routerLink="/signup" class="navBarButton pr-4 pl-4 mt-3 mr-1">Register</a></h5>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <h5><a routerLink="/login" class="navBarButton pr-4 pl-4 mt-3 mr-1">Login</a></h5>
+      </li>
+      <li class="nav-item displayName mr-4 mt-1" *ngIf="isLoggedIn">
+          <h6><a class="mt-3 mr-1">{{firstName}}</a></h6>
+          <h6><a class="mt-3 mr-1">{{lastName}}</a></h6>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <h5><a routerLink="/feedback" class="navBarButton pr-4 pl-4 mt-3 mr-1">Feedback</a></h5>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <h5><a routerLink="/user-profile" class="navBarButton pr-4 pl-4 mt-3 mr-1">Profile</a></h5>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <h5><a routerLink="/upload" class="navBarButton pr-4 pl-4 mt-3 mr-1">Upload</a></h5>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <h5><a class="navBarButton pr-4 pl-4 mt-3 mr-1" (click)="signOut()">Logout</a></h5>
+      </li>
+    </ul>
+  </nav>-->
+
+      <div id="welcomeDiv">
+        <input type="text" name="searchQuery" class="searchQuery" [(ngModel)]="searchQuery" id="itemSearchInput" placeholder="I need a..."/>
+        <input type="text" name="locationQuery" class="searchQuery" [(ngModel)]="locationQuery" id="locationSearchInput" placeholder="Location..."/>
+        <button (click)="search()" class="findButton">Find It</button>
+      </div>
+      <div id="noResultsDiv" class="mt-5 page-header align text-center" *ngIf="!showResults && clicked">
+        <h1>No Results...</h1>
+      </div>
+      <div id="showItemsDiv" *ngIf="showResults && clicked">
+      <!--<li class="card card-body mb-2" *ngFor="let item of items">
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="img-fluid" [src]="item.image" alt="" />
+          </div>
+          <div class="col-sm-8">
+            <h3 [ngStyle]="currentStyles">{{ item.price }}</h3>
+          </div>
+        </div>
+      </li>
+    </ul>-->
+    <div id="searchResultsHeader"  class="mt-5 page-header">
+      <h3>{{ searchQuery }} near {{ locationQuery }}</h3>
+    </div>
+        <div id="searchResults" class="mt-5">
+
+          <div *ngFor="let item of items" class="table-responsive-sm">
+            <table class="table">
+              <ul class="list-group block">
+              <a routerLink="item-description/{{ item.id }}">
+                <li class='list-group-item bg-dark text-white ml-2 mr-2 align-items-center'>
+                <div>
+                  {{ item.name }}
+                </div>
+                <img [src]='item.image' />
+                <div class='rentLinkDiv'>
+                  <div class='mt-2 mb-2'>
+                    <span class='price' >{{ item.price }}</span>
+                    <!--</div>
+                  <div class='rentLinkDiv'><a id='link3' class='rentLinkDetails btn btn-warning btn-block mb-3' >Details</a>
+                    </div>-->
+                  </div>
+                  </div>
+                  </li>
+                </a>
+              </ul>
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+  </body>
