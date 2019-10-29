@@ -1,0 +1,234 @@
+* {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          font-family: 'Montserrat', sans-serif;
+
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.map {
+  height: 400px;
+  width: 100%;
+}
+.mobile {
+  display: none
+}
+.userPhoto {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+}
+.logo {
+  width: 175px;
+  height: auto;
+  float: left;
+}
+.userPhotoSmall {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+.itemLocation {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px solid #FF8000;
+  border-radius: 100px;
+}
+.time {
+  color: #FF9F02;
+  float: right;
+  font-weight: bold;
+}
+.ratingList {
+    list-style-type:none;
+    width:100%;
+    margin:0;padding:0;
+}
+.itemName {
+  border-bottom: 1px solid white;
+}
+
+
+input, textarea {
+    display:block;
+    width: 100%;
+    margin-bottom:15px;
+    padding:10px;
+    background:none;
+    border:0;
+    color:#fff;
+    font-size: 15px;
+}
+input[type='text'] {
+  border-bottom: 5px solid #414a59 !important;
+  padding: 0px !important;
+}
+input[type='submit'] {
+    background-color: #FF9F02 /*#FFBA48*/;
+    cursor:pointer;
+    color:#000;
+    font-weight:bold;
+    font-size: 17.5px;
+    margin-bottom:50px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.ratingList {
+    list-style-type:none;
+    width:100%;
+    margin:0;padding:0;
+    color: #FF9F02;
+}
+.ratingList li {
+    background-color:#414a59;
+    padding:20px;
+    padding-bottom: 3%;
+    color: #C4C4C4;
+    border-radius: 20px;
+}
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+.posts {
+  margin-bottom: 7.5%;
+  color: #FF9F02;
+}
+.nav-item {
+  padding-top: 20% !important;
+}
+#contents {
+  margin-top: 0px;
+}
+.reviewsHeader {
+  border-bottom: 2px solid #FF8000;
+  width: 100% !important;
+}
+.navBarButton {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*background-color: #FFAD5B;*/
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    height: auto;
+    font-size: 15px;
+    margin-top: 5%;
+  }
+.navBarButton:hover {
+  /*background-color: #FFBC79;*/
+  background-color: white;
+  cursor: pointer;
+}
+.icon1 {
+  border: 2.5px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+}
+.icon2 {
+  color: black;
+  padding: 10px;
+  background-color: white;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  border-radius: 100px;
+}
+.img-fluid {
+  border-radius: 30px;
+}
+hr {
+  border-top: 1px solid white !important;
+}
+.cover {
+  margin-top: 5%;
+}
+.btn {
+  border-radius: 30px !important;
+}
+#logo {
+  width: 175px;
+  height: auto;
+  padding-right: 10px;
+  float: left;
+  padding-top: .75%;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.mb-full {
+  margin-bottom: 12.5rem;
+}
+.btn-success:hover {
+  cursor: pointer;
+}
+#row {
+  margin-left: none !important;
+  margin-right: none !important;
+}
+.bg {
+  /*background-image: url('./nycBright.jpg');*/
+  background-color: #212529 !important;
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  z-index: -1;
+  overflow: scroll;
+}
+.uploadedDiv {
+  margin-top: 5%;
+}
+.inputButton {
+  color: white;
+  border: 1px solid #FF8000;
+  border-radius: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: transparent;
+}
+.inputButton:hover {
+  background-color: #5B5B5B;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .mobile-fluid {
+    margin-left: 5rem !important;
+  }
+  .mobile {
+    display: block;
+  }
+  .nav-item {
+    padding-top: 0% !important;
+  }
+  .desktop {
+    display: none;
+  }
+  .no-bx-size {
+    flex: none;
+  }
+}
