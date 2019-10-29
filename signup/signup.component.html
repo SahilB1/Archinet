@@ -1,0 +1,96 @@
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div id="container">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <div id="backgroundImage">
+
+    </div>
+    <div id="loginPanelContainer">
+      <div id="loginPanel">
+        <div id="signupLoginDiv">
+          <a class="signupLoginLink" id="signupLink" routerLink="/signup">Sign Up </a>
+          <a class="signupLoginLink" id="loginLink" routerLink="/login"> Login</a>
+        </div>
+      <div id="imageDiv">
+          <a id="archinetHeader" routerLink=""><img id="logo" src="../assets/ArchinetNewWhite.png"/></a>
+        </div>
+        <form id="loginCredentials" (submit)="onSubmit()">
+          <div class="inputComponent">
+            <div class="inputComponentHeader">NAME</div>
+            <input class="input form-control" type="string" name="name" [(ngModel)]="name" type="text" value="" placeholder="John Smith"/>
+          </div>
+          <br />
+          <div class="inputComponent">
+            <div class="inputComponentHeader">E-MAIL</div>
+            <input class="input form-control" name="email" id="inputEmail" [(ngModel)]="email" type="email" value="" placeholder="Email"/>
+          </div>
+            <br />
+            <br />
+          <div class="inputComponent">
+            <div class="inputComponentHeader">PASSWORD</div>
+            <input class="input form-control" name="passwordOne" id="passwordOne" autocomplete="new-password" [(ngModel)]="passwordOne" type="password" placeholder="Password"/>
+          </div>
+          <br />
+          <div class="inputComponent">
+            <div class="inputComponentHeader">CONFIRM PASSWORD</div>
+            <input class="input form-control" id="passwordTwo" name="passwordTwo" [(ngModel)]="passwordTwo" type="password" value="" placeholder="Confirm Password"/>
+          </div>
+          <div class="danger" *ngIf="error">
+            {{errorMessage}}
+          </div>
+          <input type="submit" value="Submit" id="signUp" />
+      </form>
+
+      <div id="errorMessage"></div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--<div id="container">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <div id="backgroundImage">
+
+  </div>
+
+  <div id="newLoginPanel">
+    <div id="loginPanel">
+      <div id="signupLoginDiv">
+        <a id="signupLink" routerLink="/signup">Sign Up </a>
+        <a id="loginLink" routerLink="/login"> Login</a>
+      </div>
+    <div id="imageDiv">
+        <a id="archinetHeader" routerLink=""><img id="logo" src="../assets/logo9.png"/></a>
+      </div>
+      <form id="loginCredentials" (submit)="onSubmit()">
+        <div class="inputComponent">
+          <div class="inputComponentHeader">NAME</div>
+          <input class="input" type="string" value="" placeholder="John Smith"/>
+        </div>
+        <br />
+        <div class="inputComponent">
+          <div class="inputComponentHeader">E-MAIL</div>
+          <input class="input form-control" name="email" id="inputEmail" [(ngModel)]="email" type="email" value="" placeholder="Email"/>
+        </div>
+          <br />
+          <br />
+        <div class="inputComponent">
+          <div class="inputComponentHeader">PASSWORD</div>
+          <input class="input form-control" name="password" id="passwordOne" [(ngModel)]="password" type="password" placeholder="Password"/>
+        </div>
+        <br />
+        <div class="inputComponent">
+          <div class="inputComponentHeader">CONFIRM PASSWORD</div>
+          <input class="input" id="passwordTwo" type="password" value="" placeholder="Confirm Password"/>
+        </div>
+        <input type="submit" value="Submit" id="signUp" />
+    </form>
+
+    <div id="errorMessage"></div>
+  </div>
+
+</div>
+</div>-->
+
+</body>
