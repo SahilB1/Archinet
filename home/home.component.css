@@ -1,0 +1,799 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  margin: 0;
+}
+.logo {
+  width: 175px;
+  height: auto;
+  float: left;
+}
+.search {
+  border-radius: 10px;
+  border: none;
+  background-color: #ECECEC;
+  padding-left: 1%;
+}
+.line {
+  border-right: 2px solid black !important;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+.nav-item {
+  padding-top: 20% !important;
+}
+#navbarDiv {
+  width: 100%;
+  height: auto;
+  background-color: /*#494947*/ black;
+  position: fixed;
+  padding-bottom: 1.5%;
+}
+.headerText {
+  font-size: 50px !important;
+}
+.nav-link-black {
+  color: black !important;
+}
+.nav-link-black:hover {
+  color: #FFFFFF !important;
+}
+.nav-link-white {
+  color: white !important;
+}
+.img-small {
+  width: 40% !important;
+  height: auto;
+}
+#venmo {
+  padding-top: 5%;
+}
+.rentSearchSuggestDiv {
+  padding-bottom: 25% !important;
+}
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0.5rem 1rem !important;
+  }
+  .rentSearchSuggestDiv {
+    padding-bottom: 50% !important;
+  }
+  .nav-item {
+    padding-top: 0% !important;
+  }
+  #introHeader {
+    padding-bottom: 50% !important;
+  }
+  .search {
+    width: 90% !important;
+    margin-bottom: 5%;
+  }
+  #searchButton {
+    width: 90%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  #introHeaderDescription {
+    padding-bottom: 50% !important;
+  }
+  #subDiv2 {
+    margin-top: 50% !important;
+  }
+  .nav-font-size {
+    font-size: 15px !important;
+  }
+  .header {
+    padding-top: 35% !important;
+    font-size: 30px !important;
+    text-align: center !important;
+  }
+  .lookingFor {
+    font-size: 15px !important;
+  }
+  .full {
+    width: 100% !important;
+  }
+  #searchButton {
+    border-radius: 5px;
+    border: 0px !important;
+    background-color: #FF8B00;
+    color: white;
+    font-size: 15px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .headerText {
+    font-size: 30px !important;
+  }
+  .infoSection {
+    display: grid;
+    grid-template-rows: 50% 50% !important;
+    grid-template-columns: none !important;
+    padding-top: 2.5%;
+    padding-bottom: 20% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .infoSetion-mobile {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding-top: 2.5%;
+    padding-bottom: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .text-small {
+    font-size: 15px !important;
+  }
+  .text-tiny {
+    font-size: 15px !important;
+  }
+  .text-tiny-corporate {
+    font-size: 10px !important;
+  }
+  .text-small-dollar {
+    font-size: 40px !important;
+  }
+  .infoSection2 {
+    display: grid;
+    grid-template-columns: 50% 0.2% 50%;
+    grid-template-columns: none !important;
+    padding-top: 2.5%;
+    padding-bottom: 35% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .infoSection2-mobile {
+    display: grid;
+    grid-template-rows: 50% 0.2% 50%;
+    padding-top: 2.5%;
+    padding-bottom: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .howItWorksText {
+    display: grid;
+    grid-template-columns: none !important;
+    grid-template-rows: 10% 10%;
+    grid-row-gap: 10% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #paymentAppsDiv {
+    display: grid;
+    grid-template-columns: none !important;
+    grid-template-rows: 20% 20%;
+    grid-row-gap: 10% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #joinArchinetButton {
+    width: 80% !important;
+  }
+  .paymentImage {
+    text-align: center;
+  }
+  .howItWorksItem {
+    text-align: center;
+    color: #918F8D;
+    font-size: 20px;
+    width: auto;
+    padding-top: 3%;
+  }
+  .howItWorksImage {
+    display: none;
+  }
+  .button-mobile {
+    font-size: 15px !important;
+  }
+  .img-small {
+    width: 30% !important;
+    height: auto;
+  }
+  .img-small-logo {
+    width: 40% !important;
+    height: auto;
+  }
+  .list-small {
+    padding-left: 0px !important;
+  }
+  #footerSections {
+    display: grid;
+    grid-template-columns: none !important;
+  }
+}
+.navlink:hover {
+  color: #606060;
+}
+.nav-bg {
+  /*background-color: #201F1F;*/
+  background-color: #E7E7E7;
+  border-bottom: 3px solid #D8D8D8;
+}
+#navBarList {
+  background-color: white;
+  border-bottom: 5px solid white;
+  list-style: none;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  z-index: 1000;
+  float: right;
+}
+#navBar li {
+  display: inline-block;
+}
+.imageText {
+  color: black;
+  text-align: center;
+}
+/*@media*/
+.imageDiv {
+  background-image: url("./droneWall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*.search {
+  width: 30%;
+  height: 10%;
+  font-size: 23px;
+  background-color: transparent !important;
+  border: 0px;
+  border-bottom: 4px solid #FF8B00 !important;
+}*/
+.anim-typewriter {
+  animation: typewriter 3s steps(40) 1s 1 normal both,
+  blinkTextCursor 500ms steps(40) infinite normal;
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #7E7C7C;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #7E7C7C;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000000;
+}
+#searchButton {
+  background-color: #FF8B00;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 10px;
+}
+#searchButton:hover {
+  background-color: #FCAA30;
+  cursor: pointer;
+}
+#searchContainerDiv {
+
+}
+#introHeader {
+  font-size: 45px;
+  font-weight: bold;
+  padding-top: 15%;
+  padding-bottom: 7%;
+}
+#archinetPeopleText {
+  margin-top: 10%;
+  color: black;
+  font-size: 20px;
+}
+#peopleImage {
+  width: 50%;
+  height: auto;
+}
+#moneyImage {
+  height: auto;
+  width: 95%;
+}
+#earningsHeader {
+  color: black;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-bottom: 3px solid #FF8000;
+}
+#subDiv1 {
+  background-color: #F3F3F3;
+  /*background-image: url('./whitebg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;*/
+}
+#subDiv1 h1{
+  margin-top: 0;
+  padding-top: 1%;
+}
+@media screen and (min-width: 1200px) {
+  #macImg {
+    width: 70%;
+    height: auto;
+  }
+}
+#test {
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+#login {
+  border: 3px solid #FF8B00;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #FF8B00;
+  font-weight: bold;
+}
+#getStartedDiv {
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+#getStarted {
+  border: 5px solid white;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+}
+#getStarted:hover {
+  background-color: white;
+  color: #FF8B00;
+}
+#signup {
+  font-size: 20px;
+  padding-right: 30px;
+}
+#signup:hover {
+  color: #FCAA30;
+}
+#login:hover {
+  background-color: #FF8B00;
+  color: white;
+}
+#h1 {
+  padding-top: 100px;
+  color: black
+}
+#image {
+  width: 100%;
+  height: 90%;
+}
+#aboutUs {
+  text-align: center;
+}
+#aboutUsList {
+  list-style: none;
+}
+#subDiv2 {
+  background-color: #F3F3F3;
+  padding-bottom: 100px;
+  text-align: center;
+}
+#subDiv2 h1{
+  margin-top: 0;
+  padding-top: 100px;
+}
+#dollar {
+  color: #FF8000;
+  font-weight: bold;
+}
+#priceShown {
+  padding-top: 10%;
+  font-size: 55px;
+}
+.whatIsIt {
+  display: block;
+  position: relative;
+  top: -100px;
+}
+.howItWorks {
+  display: block;
+  position: relative;
+  top: -100px;
+}
+#separator {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: black;
+  color: black
+}
+.infoSection {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.infoSection2 {
+  display: grid;
+  grid-template-columns: 50% 0.2% 50%;
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.elaborateTextHeader {
+  color: black;
+  font-size: 25px;
+  border-bottom: 3px solid #FF8000;
+}
+.howItWorksText {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 18% !important;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+::-webkit-howItWorksText, _:future, :root .safari_only {
+
+  grid-row-gap: 200px !important;
+
+}
+@media not all and (min-resolution:.001dpcm) { @media {
+    .howItWorksText {
+      grid-row-gap: 200px !important;
+    }
+    .rentSearchSuggestDiv {
+      padding-bottom: 10% !important;
+    }
+}}
+
+@media not all and (min-resolution:.001dpcm) {
+  @media (max-width: 500px) {
+    .howItWorksText {
+      grid-row-gap: 50px !important;
+    }
+    .rentSearchSuggestDiv {
+      padding-bottom: 10% !important;
+    }
+}}
+
+.howItWorksItem {
+  text-align: center;
+  color: #918F8D;
+  font-size: 20px;
+  width: auto;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 3%;
+}
+#howItWorksImageDiv {
+  padding-top: 5%;
+  padding-bottom: 8%;
+  display: grid;
+  grid-template-columns: 60% 35%;
+}
+.howItWorksImageDiv {
+  text-align: center;
+}
+.mainContainerParagraph {
+  font-size: 23px;
+  /*background-color: #252523;*/
+  border-radius: 3px;
+  color: black;
+  text-align: center;
+  padding-bottom: 10%;
+}
+#showPriceDiv {
+  text-align: center;
+}
+#price {
+  border-bottom: 3px solid #FF8000;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: black;
+}
+.earningsInput {
+  width: 60%;
+  font-size: 20px;
+  border: none;
+  color: black;
+  background-color: transparent;
+  border-bottom: 3px solid #FF8000;
+}
+#lockImageDiv {
+  text-align: center;
+}
+#earningsButton {
+  width: 50%;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #FF8B00;
+  color: white;
+  font-weight: bold;
+}
+#earningsButton:hover {
+  background-color: #FCAA30;
+  cursor: pointer;
+}
+#chatBotIconDiv {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+#chatBotIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FF8B00;
+  border: 0;
+  position: fixed;
+}
+.categoryDetails {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 100px;
+}
+#clubsSectorDiv {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#clubsSectorDiv p {
+  font-size: 20px;
+}
+#communitiesSectorDiv {
+  margin-right: 10%;
+  margin-left: 20%;
+}
+#communitiesSectorDiv p {
+  font-size: 20px;
+}
+#buildImage {
+  width: 25%;
+  height: auto;
+}
+#exploreClubsDiv {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#exploreClubsLink {
+  color: #FF8B00;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
+  border: 4px solid #FF8B00;
+  border-radius: 3px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+#exploreClubsLink:hover {
+  color: white;
+  background-color: #FF8B00;
+  cursor: pointer;
+}
+#fundImage {
+  width: 75%;
+  height: auto;
+}
+#fundImageDiv {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+#paymentAppsDiv {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+#fundText {
+  font-size: 20px !important;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#fundButton {
+  background-color: #FF8B00;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
+  border-radius: 3px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+#fundButton:hover {
+  background-color: #FCAA30;
+  cursor: pointer;
+}
+#fundOptionsDiv {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+#fundOptionsDiv p {
+  font-size: 20px;
+}
+#buildText {
+  font-size: 25px;
+}
+.categoryText {
+  margin-right: 40px;
+}
+#organizeImage {
+  width: 25%;
+  height: auto;
+}
+#readyToBePart {
+  font-size: 20px;
+  color: #717171;
+}
+.test {
+  float: left;
+  padding-top: 1.75%;
+  color: black;
+}
+.navBarText {
+  float: right;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+.nav-font-size {
+  font-size: 20px;
+}
+.links:hover {
+  text-decoration: none;
+}
+.navBarButton:hover {
+  color: #FF8000;
+}
+.set-li-height {
+  padding-top: 6%;
+}
+#introHeaderDescription {
+  font-size: 20px;
+  height: auto;
+  margin-top: 5%;
+  padding-bottom: 20%;
+}
+#joinArchinetButton {
+  background-color: #FF8B00;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 30px;
+  border: transparent;
+  font-size: 20px;
+  color: white;
+}
+#joinArchinetButton:hover {
+  background-color: #FCAA30;
+  cursor: pointer;
+}
+#footer {
+  background-color: #1E1E1E;
+  align-items: center;
+}
+#footerImage {
+  width: 15%;
+  height: auto;
+}
+#footerImageDiv {
+  width: 100%;
+  height: auto;
+  padding-top: 3%;
+  border-bottom: 3px solid black;
+}
+#footerContents {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#footerSections {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+#footerSections ul {
+  list-style: none;
+}
+#footerSections li {
+  padding-top: 5%;
+}
+#footerSections a {
+  color: black;
+  text-decoration: none;
+}
+#footerSections a:hover {
+  color: #FF8B00;
+}
+.listHeader {
+  font-size: 17.5px;
+  font-weight: bold;
+  color: white;
+  padding-top: 10% !important;
+}
+.footerLink {
+  color: #A5A5A5 !important;
+}
+.footerLink:hover {
+  color: white !important;
+}
+.nav {
+  color: white;
+}
+.nav:hover {
+  color: #FF8000;
+}
+#corporate {
+  font-size: 13px;
+  color: #8D8D8D;
+  margin-right: 25%;
+  margin-left: 25%;
+  padding-bottom: 5%;
+}
+.formlink:hover {
+  cursor: pointer;
+}
+#corporate p {
+  margin-bottom: 0px;
+}
+@media screen and (orientation: portrait) {
+  #macImg {
+    width: 100%;
+    height: auto;
+  }
+  #macImgDiv {
+    margin-left: 0px;
+    margin-top: 30%;
+  }
+  #buildImage {
+    width: 50%;
+    height: auto;
+  }
+  #fundImage {
+    width:30%;
+    height: auto;
+  }
+}

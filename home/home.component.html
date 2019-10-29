@@ -1,0 +1,307 @@
+<!doctype html>
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--<nav id="navbar" class="navbar navbar-expand-md navbar-dark">
+    <div id="nav-bg">
+
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <div class="container ml-0 mr-0">
+    <img class="navbar-brand logo" id="nav-logo" src="../assets/ArchinetNewBlack.png" />
+    <button class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#navbarMain">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarMain">
+    <ul class="navbar-nav mr-auto set-li-height nav">
+      <li class="nav-item">
+        <a href="#whatIsIt" class="nav-link-black nav-link links nav ml-5 mr-5 nav-font-size">What Is It?</a>
+      </li>
+      <li class="nav-item">
+        <a href="#howItWorks" class="nav-link-black nav-link links nav ml-5 mr-5 nav-font-size">How It Works</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='/login' class="nav-link-black nav-link links nav formlink ml-5 mr-5 nav-font-size">Login</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/signup" class="nav-link-black nav-link links formlink nav ml-5 mr-5 nav-font-size">Register</a>
+      </li>
+    </ul>
+
+  </div>
+
+  </div>
+
+  </div>
+</nav>-->
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container nav-container">
+    <img class="navbar-brand logo" id="nav-logo" src="../assets/ArchinetNewWhite.png" />
+    <button class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#navbarMain">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarMain">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a href="#whatIsIt" class="nav-link">Why Us</a>
+      </li>
+      <li class="nav-item">
+        <a href="#howItWorks" class="nav-link">Payments</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="/signup" class="nav-link">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">(Beta)</a>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+</nav>
+
+
+  <div class="imageDiv">
+    <div class="imageText">
+      <div id="introHeader" class="text-center header font-weight-bold">
+        Rent Almost Anything.
+        <br />
+        Whenever. Wherever.
+      </div>
+      <div id="introHeaderDescription">
+        <div id="searchContainerDiv" class="full">
+          <!--<span class="lookingFor searchItem">I'm looking for a</span>
+          <span class=""><input type="text" name="searchItem" [(ngModel)]="searchItem" value="" placeholder="" id="searchItem" class="search" /></span>
+          <span class="searchLocation lookingFor mr-2">near</span><span class="lookingFor searchLocation"><input type="text" value="" name="location" [(ngModel)]="itemLocation" placeholder="" id="searchZip" class="search" /></span>
+          <button (click)="search()" id="searchButton">Find It</button>-->
+
+          <input class="" type="text" name="searchItem" [(ngModel)]="searchItem" value="" placeholder="Item" class="search"/>
+          <input class="" type="text" name="searchItem" [(ngModel)]="itemLocation" value="" placeholder="ZIP Code" class="search"/>
+          <!--<button (click)="search()" id="searchButton">
+            <i class="fa fa-search icon2" aria-hidden="true"></i>
+          </button>-->
+
+          <button type="submit" class="form-submit" (click)="search()" id="searchButton">
+              <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.342 9.869L16 14.527 14.527 16 9.87 11.342a6.248 6.248 0 1 1 1.473-1.473zm-5.094.545a4.166 4.166 0 1 0 0-8.331 4.166 4.166 0 0 0 0 8.331z" fill="#FFF" fill-rule="evenodd"></path>
+              </svg>
+            </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a name="whatIsIt" class="whatIsIt"></a>
+  <div class="mainContainer">
+    <div id="subDiv1" class="text-center pt-5">
+
+      <a class="headerText">With Archinet, Everyone Wins</a>
+      <div class="infoSection infoSection-mobile">
+        <div>
+          <img id="peopleImage" src="../assets/winners.png" />
+        </div>
+        <div id="archinetPeopleText">
+          Anything and everything you own can be making you money.
+          There are always people who are looking for an item that they only have
+          a limited use for. Archinet solves this by allowing you to
+          rent almost anything for as long as you desire.
+        </div>
+      </div>
+    </div>
+
+      <div class="infoSection2 infoSection2-mobile">
+        <div id="showPriceDiv">
+          <h1 id="price" class="header">Earnings Per Day</h1>
+          <div id="priceShown">
+            <span id="dollar" class="text-small-dollar">$</span><span class="text-small-dollar" id="dollarsShown">{{ suggestedPrice }}</span>
+          </div>
+        </div>
+
+
+        <div id="separator">
+
+        </div>
+
+        <div class="mainContainerParagraph">
+
+          <h1 id="earningsHeader" class="header">Item Value</h1>
+          <p class="text-small">Enter the value below to get an idea <br /> of what you might be able to earn in a day</p>
+          <br />
+
+          <br />
+          $ <input class="earningsInput" placeholder="Item Retail Price" [(ngModel)]="retail" name="retail" type="text" value="" id="retailPriceInput" />
+          <br />
+          <!--<br />
+          Suggested Rental Price Per Day:
+          <br />
+          <input class="earningsInput" type="string" value="$" id="suggestedPrice" />
+          <br />-->
+          <br />
+          <button (click)="getPrice()" class="button-mobile" id="earningsButton">Get Estimated Price</button>
+        </div>
+          <!--<img id="moneyImage" src="../assets/earnings.jpg" />-->
+      </div>
+
+      <div class="rentSearchSuggestDiv">
+      <div class="howItWorksText">
+        <div class="howItWorksItem">
+          <div class="elaborateTextHeader">Rent With Confidence</div>
+          <br />
+          Archinet provides direct contact to the owner of each item so you can easily
+          reach out with any inquiries regarding the item. The beta version
+          of Archinet consists of a very small number of early users and allows for
+          conflicts to be quickly addressed.
+        </div>
+        <div class="howItWorksImageDiv">
+          <img class="howItWorksImage" id="lockImage" src="../assets/lockGreen.png" />
+        </div>
+        <div class="howItWorksImageDiv">
+          <img class="howItWorksImage" id="phoneImage" src="../assets/mapArchinet.png" />
+        </div>
+        <div class="howItWorksItem">
+          <div class="elaborateTextHeader">Search By Location</div>
+          <br />
+          Find any item you're looking for within your zip code. Archinet allows for you
+          to search for items by location and lists the town they are located in so
+          that you have accurate data yet also protects the owner of the item by not revealing
+          the speciifc address.
+        </div>
+        <div class="howItWorksItem last">
+          <div class="elaborateTextHeader">Leave Feedback</div>
+          <br />
+          Archinet is a community that strives to serve its members. We're always looking
+          to better ourselves and provide more value to the people who make us who we are. We greatly value
+          user feedback as it enables to learn how to improve the platform to better serve your needs.
+        </div>
+        <div class="howItWorksImageDiv">
+          <img class="howItWorksImage" id="phoneImage" src="../assets/idea.png" />
+        </div>
+      </div>
+
+      </div>
+
+    <a name="howItWorks" class="howItWorks"></a>
+    <div id="subDiv2" class="pt-5 text-center">
+      <a class="headerText">How It Works</a>
+      <div class="imageAndText">
+        <div id="paymentAppsDiv">
+          <div class="paymentImage">
+            <img class="img-small" id="venmo" src="../assets/venmo_logo_blue.svg"/>
+          </div>
+          <div class="paymentImage">
+            <img class="img-small" src="../assets/paypal-logo.png"/>
+          </div>
+          <div class="paymentImage">
+            <img class="img-small" src="../assets/cash_app.png"/>
+          </div>
+        </div>
+        <p class="categoryText text-small" id="fundText">
+          Payments for rentals on Archinet are made simple thanks to peer-to-peer
+          payment platforms. To pay the owner of an item for a rental, simply use a
+          mobile payment service such as the ones listed above or any service that
+          you would like. As we are in beta, we are currently building out our own payment service.
+        </p>
+      </div>
+      <!--<div class="imageAndText">
+        <div id="fundImageDiv">
+          <img id="fundImage" class="img-small" src="../assets/archinetProfileExample.png"/>
+        </div>
+        <p class="categoryText text-small" id="fundText">
+          Keep track of your earnings throughout the month and set goals for
+          a target amount. You'll also be updated on the current day of your leases
+          so you know when to expect them back. If the renter overgoes the duration of the
+          lease, 10% of the item's daily rent value will be charged extra per day after the lease deadline.
+        </p>
+      </div>-->
+      <div id="joinArchinetButtonDiv">
+        <div id="readyToBePart" class="text-small">Ready To Be A Part Of It?</div>
+        <button id="joinArchinetButton" class="text-small mt-3" routerLink="/login">Join Archinet</button>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="footerContents">
+      <div id="footerSections">
+
+        <div class="text-center footerDiv">
+          <ul class="list-small text-tiny">
+            <li class="listHeader text-tiny">
+              Connect
+            </li>
+            <li class="text-tiny">
+              <a class="footerLink" href="https://www.instagram.com/archinet_tech/" target="_blank">Instagram</a>
+            </li>
+            <li class="text-tiny">
+              <a class="footerLink" href="https://twitter.com/ArchinetTech" target="_blank">Twitter</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center footerDiv">
+          <ul class="list-small text-tiny">
+            <li class="listHeader text-tiny">
+              Product
+            </li>
+            <li class="text-tiny">
+              <a class="footerLink" href="#">Get The App</a>
+            </li>
+            <li class="text-tiny">
+              <a class="footerLink" href="#">Image Credits</a>
+              <!--
+              <div>Icons made by
+              <a href="https://www.flaticon.com/authors/vectors-market"
+              title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/"
+              title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+              title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
+              </a>
+            </div>-->
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center footerDiv">
+          <ul class="list-small text-tiny">
+            <li class="listHeader text-tiny">
+              Company
+            </li>
+            <li class="text-tiny">
+              <a class="footerLink" routerLink="/about">About</a>
+            </li>
+            <li class="text-tiny">
+              <a class="footerLink" href="/contact">Contact</a>
+            </li>
+            <a></a>
+          </ul>
+        </div>
+
+      <div class="text-center footerDiv">
+        <ul class="list-small text-tiny">
+          <li class="listHeader text-tiny">
+            Support
+          </li>
+          <li class="text-tiny">
+            <a class="footerLink" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+
+      </div>
+      <div id="corporate" class="text-tiny-corporate pt-5 text-center">
+        <p>
+          © 2019 Archinet Technologies Inc. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+</body>
