@@ -1,0 +1,16 @@
+export interface Item {
+  name?: string,
+  image?: string,
+  price?: string,
+  id?: string,
+  description?: string,
+  type?: string,
+  photo?: string,
+  userName?: string,
+  rating?: string,
+  location?: any,
+  contact?: any,
+  time?: any,
+  email?: any,
+  count?: any,
+}
