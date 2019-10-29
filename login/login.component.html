@@ -1,0 +1,62 @@
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div id="container">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <div id="backgroundImage">
+
+    </div>
+    <div id="loginPanelContainer">
+      <div id="loginPanel">
+        <div id="signupLoginDiv">
+          <a class="signupLoginLink" id="signupLink" routerLink="/signup">Sign Up </a>
+          <a class="signupLoginLink" id="loginLink" routerLink="/login"> Login</a>
+        </div>
+      <div id="imageDiv">
+          <a id="archinetHeader" routerLink=""><img id="logo" src="../assets/ArchinetNewWhite.png"/></a>
+        </div>
+        <form id="loginCredentials" #userForm="ngForm" (submit)="onSubmit()">
+          <div class="inputComponent">
+            <div class="inputComponentHeader">E-MAIL</div>
+            <input
+            class="input"
+            id="inputEmail"
+            type="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="Email"
+            #clientEmail="ngModel"
+            [ngClass]="{'is-invalid': clientEmail.errors && clientEmail.touched}"
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+            required
+            />
+          </div>
+            <br />
+            <br />
+          <div class="inputComponent">
+            <div class="inputComponentHeader">PASSWORD</div>
+            <input class="input" id="inputPassword" type="password" name="password" [(ngModel)]="password" placeholder="Password"/>
+          </div>
+          <div class="danger" *ngIf="error">
+            Incorrect Email or Password
+          </div>
+          <input type="submit" id="login" value="Login"/>
+          <div id="buttonDiv">
+            <a routerLink="/reset" id="forgotLink">Forgot password?</a>
+          </div>
+          <div id="buttonDiv">
+            <button (click)="googleLogin()" id="googleLogin"><div id="googleLogoDiv">
+            <img id="googleLogo" src="../assets/googleLogo.png"/>
+            <div id="googleLoginText">
+              Login With Google
+            </div>
+            </div></button>
+          </div>
+      </form>
+
+      <div id="errorMessage"></div>
+    </div>
+
+  </div>
+</div>
+
+</body>
