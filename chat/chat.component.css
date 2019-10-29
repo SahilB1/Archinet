@@ -1,0 +1,198 @@
+* {
+  font-family: 'Archivo', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-image: url("./navyBlueGradient.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  z-index: -1;
+}
+#bgImageDiv {
+  background-image: url("./navyBlueGradient.jpg");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  z-index: -1;
+}
+#logo {
+  width: 250px;
+  height: auto;
+  padding-right: 10px;
+  float: left;
+  padding-top: .75%;
+}
+#navbarDiv {
+  width: 100%;
+  height: auto;
+  background-color: #63615F;
+  position: fixed;
+  padding-bottom: 1.5%;
+}
+#navBarList {
+  background-color: #E0E1E1;
+  border-bottom: 5px solid #E0E1E1;
+  list-style: none;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  z-index: 1000;
+}
+#navBar li {
+  display: inline-block;
+}
+#login {
+  border: 2px solid #FF8B00;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#loginDiv {
+  padding-top: 1.5%;
+}
+#signup {
+  font-size: 20px;
+  padding-right: 30px;
+}
+#signup:hover {
+  color: #FCAA30;
+  background-color: #EAE9E7;
+}
+#login:hover {
+  background-color: #FF8B00;
+  color: white;
+}
+h1 {
+  width: 100%;
+  height: 100%;;
+}
+.test {
+  float: left;
+  padding-top: 25px;
+  color: black;
+  font-family: Arial;
+}
+.navBarText {
+  float: right;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+.navBarButton {
+  color: #FF8B00;
+  text-decoration: none;
+  font-family: Arial;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  height: auto;
+  font-size: 15px;
+}
+#parentDiv {
+  padding-top: 10%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+#imageLinks {
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  grid-row-gap: 100px;
+}
+#inputDiv {
+  text-align: center;
+  width: 100%;
+  padding-top: 2%;
+  height: 20%;
+  display: grid;
+  grid-template-columns: 90% 6%;
+}
+#messagesDiv {
+  width: 80%;
+  height: 400px;
+  border: 1px solid white;
+  overflow: scroll;
+}
+#input {
+  width: 90%;
+  height: 50%;
+  border-radius: 100px;
+  border: none;
+  background-color: #8E8E8C
+}
+#chatDiv {
+  height: 100%;
+}
+input {
+    color: white;
+    padding-left: 3%;
+    font-size: 15px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+#addChatButton {
+  color: white;
+  background-color: #FF8B00;
+  border: none;
+  height: 70%;
+  width: 80%;
+  border-radius: 100px;
+  font-size: 35px;
+}
+#addChatButton:hover {
+  background-color: #F9B625;
+}
+#messagesList {
+  color: white;
+  width: 50%;
+  height: auto;
+}
+#archinetChat {
+  color: white;
+}
+.itemLinks a {
+  color: white;
+  font-size: 25px;
+}
+.itemLinks {
+  text-align: center;
+  width: auto;
+}
+.itemLinks:hover {
+  background-color: #C1C1BA;
+}
+@media screen and (max-height: 800px) {
+  #inputDiv {
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    grid-template-columns: 90% 9%;
+  }
+  #addChatButton {
+    width: 70%;
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<body>
+  <div id="bgImageDiv">
+  </div>
+      <div id="navbarDiv">
+          <ul class="navBarList">
+          <a href="#">
+          <img id="logo" src="../assets/Archinet2.png" />
+          <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
+          </a>
+        <div class="test">
+        </div>
+        <div class="navBarText" id="loginDiv">
+          <a class="navBarButton" id="login" routerLink="/login">Profile</a>
+        </div>
+        <div class="navBarText">
+        </div>
+          </ul>
+      </div>
+      <div id="parentDiv">
+        <div id="imageLinks">
+          <div class="itemLinks">
+            <a routerLink="#">Friends</a>
+          </div>
+          <div class="itemLinks">
+            <a routerLink="#">Explore</a>
+          </div>
+          <div class="itemLinks">
+            <a routerLink="#">Organize</a>
+          </div>
+        </div>
+        <div id="chatDiv">
+          <div>
+            <h1 id="archinetChat">ARCHINET CHAT</h1>
+          </div>
+          <div id="messagesDiv">
+            <ul id="messagesList">
+
+            </ul>
+          </div>
+          <div id="inputDiv">
+            <input id="input" value="" placeholder="Let's Archinet!"/> <button (click)="addMessage()" id="addChatButton">+</button>
+          </div>
+        </div>
+      </div>
+  </body>
