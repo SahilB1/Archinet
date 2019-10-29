@@ -1,0 +1,202 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #212529 !important;
+    position: fixed;
+    overflow: scroll;
+    margin: none !important;
+}
+.logo {
+  width: 175px;
+  height: auto;
+  float: left;
+}
+.container {
+  width: 100% !important;
+  height: auto !important;
+  margin-left: none !important;
+  margin-right: none !important;
+  padding-left: none !important;
+  padding-right: none !important;
+}
+.nav-item {
+  padding-top: 20% !important;
+}
+#navbarDiv {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  padding-bottom: 1.5%;
+}
+.icon1 {
+  border: 2.5px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+}
+.icon2 {
+  border: 2px solid white;
+  color: black;
+  padding: 10px;
+  background-color: white;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  border-radius: 100px;
+}
+#navBarList {
+  background-color: #E0E1E1;
+  border-bottom: 5px solid #E0E1E1;
+  list-style: none;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  z-index: 1000;
+}
+#navBar li {
+  display: inline-block;
+}
+.navBarText {
+  float: right;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+.navBarButton {
+  color: #FF8B00;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  height: auto;
+  font-size: 15px;
+}
+.test {
+  float: left;
+  padding-top: 25px;
+  color: black;
+}
+#loginDiv {
+  padding-top: 1.5%;
+}
+#login:hover {
+  color: white;
+}
+#logo {
+  width: 175px;
+  height: auto;
+  padding-right: 10px;
+  float: left;
+  padding-top: .75%;
+}
+.suggest-button {
+  width: 40% !important;
+}
+.approximate {
+  color: #636C72;
+}
+.inputButton {
+  color: white;
+  border: 1px solid #FF8000;
+  border-radius: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: transparent;
+}
+.uploadDiv {
+  margin-top: 5%;
+}
+.alert {
+  position: fixed;
+  width: 80%;
+  text-align: center;
+}
+.image {
+  text-align: center;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+img {
+  text-align: center;
+}
+#success {
+  color: #0C8300;
+  font-size: 30px;
+  display: none;
+  margin-top: 5%;
+}
+.inputButton:hover {
+  background-color: #5B5B5B;
+  cursor: pointer;
+}
+input[type="file"] {
+  display: none;
+}
+.inputDiv {
+  margin-top: 5%;
+}
+#inputDiv {
+  text-align: center;
+}
+#dollar {
+  color: white;
+}
+.inputLeft {
+  margin-right: 10%;
+}
+.inputInfo {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #FF8000;
+  width: 50%;
+  color: white;
+}
+.navBarButton {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  height: auto;
+  font-size: 15px;
+  margin-top: 5%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.navBarButton:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+#mainContainer {
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .nav-item {
+    padding-top: 0% !important;
+  }
+  .text-small {
+    font-size: 20px !important;
+  }
+  #mainContainer {
+    grid-template-columns: none !important;
+    grid-template-rows: 50% 50%;
+  }
+}

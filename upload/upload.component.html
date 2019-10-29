@@ -1,0 +1,107 @@
+<!doctype html>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container nav-container">
+      <a></a>
+      <img class="navbar-brand logo" id="nav-logo" src="../assets/ArchinetNewWhite.png" />
+      <button class="navbar-toggler" type="button"
+      data-toggle="collapse" data-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="/user-account" class="nav-link">Search</a>
+        </li>
+        <li class="nav-item">
+          <a href="/user-profile" class="nav-link">Profile</a>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </nav>
+
+  <div id="mainContainer">
+
+    <div id="imageDiv">
+
+      <h1 class="text-small">Image Preview</h1>
+
+      <div class="image">
+        <img src="" height="500px" width="700px" style="display: none" title="Your item..." alt="Your item..." id="image"/>
+      </div>
+
+    </div>
+
+
+    <div id="inputDiv">
+
+      <div class="inputDiv ml-2">
+        <input type="text" class="inputInfo" [(ngModel)]="name" name="name" value="" placeholder="Item name" />
+      </div>
+
+      <div class="inputDiv ml-2">
+        <input type="text" class="inputInfo" [(ngModel)]="type" name="type" value="" placeholder="Item type" />
+      </div>
+
+
+
+      <div class="inputDiv">
+        <span id="dollar">$</span> <input type="text" class="inputInfo" [(ngModel)]="retail" name="retail" value="" placeholder="Item retail price" />
+        <div class="approximate">
+          (Approximate if necessary)
+        </div>
+        <div>
+          <button class="btn btn-info suggest-button mt-2" (click)="getSuggestedPrice()">Suggest</button>
+        </div>
+      </div>
+
+      <div class="inputDiv">
+        <span id="dollar">Suggested price: $</span> <span id="suggested" class="text-white">{{ suggestedPrice }}</span>
+      </div>
+
+      <div class="inputDiv">
+        <span id="dollar">$</span> <input type="text" class="inputInfo" [(ngModel)]="price" name="price" value="" placeholder="Item price per day" />
+      </div>
+
+      <div class="inputDiv ml-2">
+        <textarea type="text" class="inputInfo" [(ngModel)]="description" name="description" value="" placeholder="Item description">
+        </textarea>
+      </div>
+
+      <div class="inputDiv ml-2">
+        <input type="text" class="inputInfo" [(ngModel)]="contact" name="contact" value="" placeholder="Your phone number" />
+      </div>
+
+      <div class="text-white mt-5">
+        * Please take pictures in landscape mode (horizontal) on phones
+      </div>
+      <div class="text-white mt-5">
+        * Location services must be enabled to upload items
+      </div>
+
+      <div class="uploadDiv">
+
+        <label class="inputButton inputLeft" >
+          Upload Image
+          <input type="file" id="fileInput" (change)="onFileChange($event)" />
+        </label>
+
+        <button class="inputButton inputRight" (click)="upload()">Upload</button>
+
+        <div id="success">
+          Upload Successful!
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
