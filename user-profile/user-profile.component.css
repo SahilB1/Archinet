@@ -1,0 +1,338 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #212529 !important;
+    position: fixed;
+    overflow: scroll;
+    margin: none !important;
+}
+.logo {
+  width: 175px;
+  height: auto;
+  float: left;
+}
+.container {
+  width: 100% !important;
+  height: auto !important;
+  margin-left: none !important;
+  margin-right: none !important;
+  padding-left: none !important;
+  padding-right: none !important;
+}
+#navbarDiv {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  padding-bottom: 1.5%;
+}
+.nav-item {
+  padding-top: 20% !important;
+}
+.icon1 {
+  border: 2.5px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+}
+.btn {
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.icon2 {
+  border: 2px solid white;
+  color: black;
+  padding: 10px;
+  background-color: white;
+  padding-left: 10.5px;
+  padding-right: 10.5px;
+  border-radius: 100px;
+}
+#navBarList {
+  background-color: #E0E1E1;
+  border-bottom: 5px solid #E0E1E1;
+  list-style: none;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  z-index: 1000;
+}
+#navBar li {
+  display: inline-block;
+}
+.navBarText {
+  float: right;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+.navBarButton {
+  color: #FF8B00;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  height: auto;
+  font-size: 15px;
+}
+.test {
+  float: left;
+  padding-top: 25px;
+  color: black;
+}
+#loginDiv {
+  padding-top: 1.5%;
+}
+#login:hover {
+  color: white;
+}
+#logo {
+  width: 175px;
+  height: auto;
+  padding-right: 10px;
+  float: left;
+  padding-top: .75%;
+}
+.navBarButton {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  height: auto;
+  font-size: 15px;
+  margin-top: 5%;
+}
+.navBarButton:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+#mainContainer {
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 40% 50%;
+  padding-bottom: 5%;
+}
+#earningsRingContainer {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+#earningsRingDiv {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+#earningsHeader {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 35%;
+  font-size: 25px;
+}
+#earningsTotal {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 10%;
+}
+#earningsRing {
+  border: 10px solid #FF8B00;
+  height: 90%;
+  border-radius: 200px;
+}
+#profileInfoHeader {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  border-bottom: 2px solid #FF8000;
+  text-align: center;
+}
+#profileInfo {
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+#rentItems {
+  font-size: 20px;
+  color: white;
+}
+#dollarProgressionDiv {
+  color: white;
+  padding-top: 3%;
+}
+#progressBarDiv {
+  color: white;
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: 20px;
+}
+.progressBarSkeleton {
+  margin-top: 3%;
+  width: 100%;
+  height: 40px;
+  background-color: #66635D;
+  border-radius: 30px;
+}
+#progressBarValueGoal {
+  border-radius: 30px;
+  width: 0%;
+  height: 40px;
+  background-color: #20B1FF;
+}
+#progressBarValueDay {
+  border-radius: 30px;
+  width: 0%;
+  height: 40px;
+  background-color: #FFC220;
+}
+#setGoalButtonDiv {
+  width: 100%;
+  text-align: center;
+}
+#setGoalButton {
+   padding-left: 25%;
+   padding-right: 25%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: #FFC100;
+   border: 1px solid transparent;
+   border-radius: 30px;
+   font-size: 20px;
+   color: black;
+}
+#setGoalButton:hover {
+  background-color: #FFD962;
+  cursor: pointer;
+}
+#popupDiv {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#popupContent {
+  background-color: #525351;
+  color: black;
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-top: 10%;
+  text-align: center;
+  border-radius: 10px;
+}
+#popupHeader {
+  font-size: 20px;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  color: white;
+}
+.input {
+  border: 0px;
+  border-bottom: 3px solid #FFBA01;
+  width: 50%;
+  height: auto;
+  font-size: 15px;
+  background-color: transparent;
+  color: white;
+}
+.inputDiv {
+  padding-bottom: 5%;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #E8EAE6;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #E8EAE6;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #E8EAE6;
+}
+#publishGoalButtonDiv {
+  padding-bottom: 5%;
+}
+#quitPopupDiv {
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+#quitPopup {
+  background: transparent;
+  border: none;
+  color: white;
+}
+#quitPopup:hover {
+  color: #FFBA01;
+  cursor: pointer;
+}
+#publishGoalButton {
+  padding-left: 22.5%;
+  padding-right: 22.5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFBA01;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  font-size: 15px;
+  color: black;
+}
+#publishGoalButton:hover {
+  background-color: #FFD962;
+  cursor: pointer;
+}
+.displayName {
+  color: #FF8000;
+  display: flex;
+  flex-direction: row;
+  text-align: center !center;
+}
+@media (max-width: 500px) {
+  .nav-item {
+    padding-top: 0% !important;
+  }
+  .text-small {
+    font-size: 15px !important;
+  }
+  #mainContainer {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: none !important;
+    grid-template-rows: 50% 50%;
+    padding-bottom: 5%;
+  }
+  #profileInfoHeader {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  #earningsHeader {
+    padding-top: 25%;
+  }
+  #earningsRing {
+    border-radius: 500px;
+  }
+}

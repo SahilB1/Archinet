@@ -1,0 +1,109 @@
+<!doctype html>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="bg">
+</div>
+
+<div class="fill">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container nav-container">
+      <img class="navbar-brand logo" id="nav-logo" src="../assets/ArchinetNewWhite.png" />
+      <button class="navbar-toggler" type="button"
+      data-toggle="collapse" data-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="/user-account" class="nav-link">Search</a>
+        </li>
+        <li class="nav-item">
+          <a href="/upload" class="nav-link">Upload</a>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </nav>
+
+  <div id="mainContainer">
+    <div id="earningsRingContainer">
+      <div id="earningsRingDiv">
+        <div id="earningsRing">
+          <div id="earningsHeader" class="text-small">
+            Your Earnings:
+          </div>
+          <div class="text-small" id="earningsTotal">
+            $0.00
+          </div>
+        </div>
+      </div>
+      <div id="setGoalButtonDiv">
+        <button (click)="setGoal()" class="btn text-small btn-warning">
+        Set Goal
+        </button>
+      </div>
+    </div>
+
+    <div id="profileInfoDiv">
+      <div id="profileInfoHeader" class="text-small" *ngIf="userGoogleLogin">
+        Hey, {{firstName}} {{lastName}}
+      </div>
+      <div id="profileInfoHeader" class="text-small" *ngIf="!userGoogleLogin">
+        Hey, {{email}}
+      </div>
+
+      <div id="profileInfo" class="text-small">
+        Items You've Given Out For Rent:
+      </div>
+      <br />
+      <span id="rentItems" class="text-small"> <i>Nothing Here Yet!</i> </span>
+      <div id="profileInfo" class="text-small">
+        Items You've Rented For Yourself:
+      </div>
+      <br />
+      <span id="rentItems" class="text-small"> <i>Nothing Here Yet!</i> </span>
+      <div id="progressBarDiv" class="text-small">
+        Monthly Goal Progression:
+        <div id="dollarProgressionDiv" class="text-small">
+          <i *ngIf="!init">{{userGoalString}}</i>
+          <span *ngIf="init"> $0 / {{userGoalString}} </span>
+        </div>
+      <div class="progressBarSkeleton text-small">
+        <div id="progressBarValueGoal">
+        </div>
+      </div>
+      </div>
+      <div id="progressBarDiv" class="text-small">
+        Day Of Current Lease:
+        <div id="dollarProgressionDiv" class="text-small">
+          <i>You Haven't Leased Anything Yet</i>
+        </div>
+      <div class="progressBarSkeleton">
+        <div id="progressBarValueDay">
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div id="popupDiv">
+    <div id="popupContent">
+      <div id="quitPopupDiv">
+        <button (click)="quitPopup()" class="text-small" id="quitPopup">X</button>
+      </div>
+      <div id="popupHeader" class="text-small">
+        Set A Goal Amount
+      </div>
+        <div class="inputDiv">
+          <input class="input" id="goalValue" type="text" value="" placeholder="$ Earnings Goal For The Month"/>
+        </div>
+        <br />
+      <div id="publishGoalButtonDiv">
+        <button (click)="exitPopup()" class="btn text-small btn-warning">Publish Goal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
