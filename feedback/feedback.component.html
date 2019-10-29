@@ -1,0 +1,32 @@
+<body>
+
+  <div class="container fill">
+    <button routerLink="/user-account" id="backButton">Back</button>
+    <div id="contents">
+      <div class="header">
+        <img id="logo" src="../assets/ArchinetNewWhite.png"/>
+        <br />
+        <h1>
+           Feedback Forum
+        </h1>
+      </div>
+
+      <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+      <input type="text" value="" placeholder="Your Message..." name="message" [(ngModel)]="message" />
+      <input type="submit" value="Post" (click)="addMessage()" />
+
+      <div class="posts">
+        <ul *ngFor="let post of posts">
+          <div>{{post.user}}</div>
+          <li>
+            {{post.message}}
+            <br />
+            <span>{{post.time | date: "medium"}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
